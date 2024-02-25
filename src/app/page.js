@@ -1,26 +1,23 @@
-import Image from "next/image";
-
 export default function Home() {
   return (
     <main>
       {/* Hero section: bio on the left, name and subtitle on the right */}
-      <section className="flex min-h-screen px-4 py-16 bg-white">
+      <section className="flex flex-col justify-center min-h-screen px-5 bg-white">
         {/* Name, subtitle */}
-        <div className="w-2/3 pl-10">
-          <h1 className="text-5xl font-bold text-gray-800 md:text-7xl">
-            Anh Nguyen
+        <div className="flex flex-col">
+          <h1 className="font-bold text-gray-800 text-8xl md:text-9xl">
+            Anh <br /> Nguyen
           </h1>
-          <p className="mt-4 text-xl text-gray-600 md:text-2xl">
+          <p className="mt-8 text-3xl text-gray-600 md:text-4xl">
             Software Engineer
           </p>
         </div>
         {/* Bio */}
-        <div className="flex w-1/2">
-          <p className="text-xl text-gray-600 md:text-3xl">
-            4-th year Computer Science Major at RIT. Looking for full-time
-            software engineer position. Open to relocation
-          </p>
-        </div>
+        <p className="text-xl text-gray-600 mt-11 md:text-2xl">
+          Senior BS Computer Science student at the Rochester Institute of
+          Technology, currently working at Amplify Education and building
+          educational software for K-12 students.
+        </p>
       </section>
       {/* Projects section */}
       <section className="min-h-screen" id="projects">
