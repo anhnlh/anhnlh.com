@@ -1,1 +1,31 @@
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Micro+5&display=swap");
 @import "tailwindcss";
+
+@theme {
+  --font-jetbrains-mono: "JetBrains Mono", "monospaced";
+  --font-micro-5: "Micro 5", "sans-serif";
+}
+
+@layer base {
+  a {
+    @apply underline hover:text-emerald-400;
+  }
+
+  p {
+    @apply font-extralight;
+  }
+
+  h1 {
+    @apply mb-5 text-6xl text-amber-400;
+  }
+
+  h2 {
+    @apply mb-5 text-3xl text-cyan-400;
+  }
+
+  #experience,
+  #projects,
+  #skills {
+    @apply rounded-2xl border-2 border-indigo-500 p-10;
+  }
+}

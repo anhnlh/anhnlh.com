@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -9,179 +9,195 @@
     <link rel="stylesheet" href="/src/styles.css" />
     <script src="src/components/navbar.js"></script>
   </head>
-  <body>
-    <header>
-      <nav class="bg-blue-950 text-center text-white text-5xl p-5">
-        <a class="mx-5 p-2 hover:text-violet-400" href="/">Home</a>
-        <a class="mx-5 p-2 hover:text-violet-400" href="/pages/projects"
+  <body class="font-jetbrains-mono bg-slate-900 text-slate-100">
+    <header class="grid grid-cols-3 items-center bg-blue-950 py-3 text-xl">
+      <section>
+        <a
+          href="/"
+          class="font-micro-5 ml-1 p-2 text-left text-4xl text-amber-400 no-underline"
+          >anhnlh</a
+        >
+      </section>
+      <nav class="text-center">
+        <a class="mx-5 p-2 no-underline hover:text-blue-400" href="/">Home</a>
+        <a
+          class="mx-5 p-2 no-underline hover:text-blue-400"
+          href="/pages/projects"
           >Projects</a
         >
       </nav>
     </header>
-    <h1 class="text-3xl font-bold underline">Anh Nguyen</h1>
-    <section id="about">
-      <h2>About Me</h2>
-      <p>
-        Software Engineer. Graduated from RIT with a BS in Computer Science
-        &amp; Economics. Currently working at Frontier Science.
-      </p>
-    </section>
+    <div class="mx-5 mb-10">
+      <!-- Perhaps use this "bg-linear-to-b from-slate-900 via-indigo-800 via-40% to-slate-900" -->
+      <section id="about" class="ml-5 py-64">
+        <h1>Anh Nguyen</h1>
+        <p class="text-lg">
+          Software Engineer.
+          <br />
+          Attained a Bachelor of Science in Computer Science &amp; Economics
+          from RIT.
+          <br />
+          Currently crafting software at Frontier Science.
+        </p>
+      </section>
 
-    <section id="experience">
-      <h2>Experience</h2>
-      <ul>
-        <li>
-          <h3>Frontier Science</h3>
-          <p><strong>Location:</strong> Amherst, NY (Remote)</p>
-          <p><strong>Role:</strong> Software Engineer</p>
-          <p><strong>Duration:</strong> Feb 2025 -- Current</p>
+      <div id="cards" class="grid grid-cols-3 gap-5">
+        <section id="experience" class="">
+          <h2>Experience</h2>
           <ul>
             <li>
-              Developing the Web LDMS laboratory information management systems,
-              serving 800+ labs worldwide.
+              <h3>Frontier Science</h3>
+              <p><strong>Location:</strong> Amherst, NY (Remote)</p>
+              <p><strong>Role:</strong> Software Engineer</p>
+              <p><strong>Duration:</strong> Feb 2025 -- Current</p>
+              <ul>
+                <li>
+                  Developing the Web LDMS laboratory information management
+                  systems, serving 800+ labs worldwide.
+                </li>
+                <li>
+                  Added features and fixed critical bugs for Web LDMS, improving
+                  the overall user experience and stability.
+                </li>
+                <li>
+                  Completed numerous compliance trainings required by the NIH,
+                  21 CFR Part 11, etc.
+                </li>
+              </ul>
             </li>
             <li>
-              Added features and fixed critical bugs for Web LDMS, improving the
-              overall user experience and stability.
+              <h3>Düsseldorf University of Applied Sciences</h3>
+              <p><strong>Location:</strong> Düsseldorf, Germany</p>
+              <p><strong>Role:</strong> DAAD RISE Germany Research Scholar</p>
+              <p><strong>Duration:</strong> May 2024 -- Aug 2024</p>
+              <ul>
+                <li>
+                  Researched explainable AI (xAI) techniques and developed
+                  autoencoder models for dimensionality reduction.
+                </li>
+                <li>
+                  Developed an interactive suite for comparing the performance
+                  of multiple dimensionality reduction methods.
+                </li>
+                <li>
+                  Optimized the novel data quality assurance tool, reducing
+                  runtime by 90% and significantly improving efficiency.
+                </li>
+              </ul>
             </li>
             <li>
-              Completed numerous compliance trainings required by the NIH, 21
-              CFR Part 11, etc.
+              <h3>Amplify Education Inc.</h3>
+              <p><strong>Location:</strong> Brooklyn, NY (Remote)</p>
+              <p><strong>Role:</strong> Software Engineer Co-op</p>
+              <p><strong>Duration:</strong> Jan 2024 -- May 2024</p>
+              <ul>
+                <li>
+                  Implemented xAPI user experience collection in mCLASS,
+                  impacting over 200,000 K-3 students in Louisiana.
+                </li>
+                <li>
+                  Resolved a persistent front-end error, reducing 10% user
+                  frustration and enhancing application stability.
+                </li>
+                <li>
+                  Optimized legacy PagerDuty monitors and alarms, minimizing
+                  alert fatigue and increasing team productivity.
+                </li>
+              </ul>
+            </li>
+            <li>
+              <h3>Amplify Education Inc.</h3>
+              <p><strong>Location:</strong> Brooklyn, NY (Remote)</p>
+              <p><strong>Role:</strong> Software Engineer Co-op</p>
+              <p><strong>Duration:</strong> May 2022 -- Dec 2022</p>
+              <ul>
+                <li>
+                  Developed a student data merge tool for Tier 3 Support,
+                  automating manual processes and saving significant time.
+                </li>
+                <li>
+                  Investigated data sources for the ongoing GraphQL integration,
+                  speeding up the overall transition process.
+                </li>
+                <li>
+                  Served as acting Scrum Master for one sprint, ensuring sprint
+                  progress and maintaining team momentum.
+                </li>
+              </ul>
             </li>
           </ul>
-        </li>
-        <li>
-          <h3>Düsseldorf University of Applied Sciences</h3>
-          <p><strong>Location:</strong> Düsseldorf, Germany</p>
-          <p><strong>Role:</strong> DAAD RISE Germany Research Scholar</p>
-          <p><strong>Duration:</strong> May 2024 -- Aug 2024</p>
+        </section>
+
+        <section id="projects">
+          <h2>Projects</h2>
           <ul>
             <li>
-              Researched explainable AI (xAI) techniques and developed
-              autoencoder models for dimensionality reduction.
+              <h3>LofiBeats</h3>
+              <p>Short description</p>
             </li>
             <li>
-              Developed an interactive suite for comparing the performance of
-              multiple dimensionality reduction methods.
+              <h3>Self-hosted Portfolio</h3>
+              <p>Short description</p>
             </li>
             <li>
-              Optimized the novel data quality assurance tool, reducing runtime
-              by 90% and significantly improving efficiency.
+              <h3>SinDDM</h3>
+              <p>Short description</p>
+            </li>
+            <li>
+              <h3>RISE Germany</h3>
+              <p>Short description</p>
+            </li>
+            <li>
+              <h3>Federated Learning</h3>
+              <p>Short description</p>
+            </li>
+            <li>
+              <h3>Vitri</h3>
+              <p>Short description</p>
+            </li>
+            <li>
+              <h3>Controlled Variance Pricing</h3>
+              <p>Short description</p>
+            </li>
+            <li>
+              <h3>AirBnB 10-K</h3>
+              <p>Short description</p>
             </li>
           </ul>
-        </li>
-        <li>
-          <h3>Amplify Education Inc.</h3>
-          <p><strong>Location:</strong> Brooklyn, NY (Remote)</p>
-          <p><strong>Role:</strong> Software Engineer Co-op</p>
-          <p><strong>Duration:</strong> Jan 2024 -- May 2024</p>
+        </section>
+
+        <section id="skills">
+          <h2>Skills</h2>
           <ul>
             <li>
-              Implemented xAPI user experience collection in mCLASS, impacting
-              over 200,000 K-3 students in Louisiana.
+              <strong>Languages & Frameworks:</strong> Python, C#, ASP.NET,
+              JavaScript, SQL, Java, React
             </li>
             <li>
-              Resolved a persistent front-end error, reducing 10% user
-              frustration and enhancing application stability.
+              <strong>Database Systems:</strong> SQL Server, PostgreSQL,
+              DynamoDB, MongoDB
             </li>
             <li>
-              Optimized legacy PagerDuty monitors and alarms, minimizing alert
-              fatigue and increasing team productivity.
+              <strong>Developer Tools:</strong> Amazon Web Services (AWS), Git,
+              Subversion, Linux, DataDog, Docker
             </li>
           </ul>
-        </li>
-        <li>
-          <h3>Amplify Education Inc.</h3>
-          <p><strong>Location:</strong> Brooklyn, NY (Remote)</p>
-          <p><strong>Role:</strong> Software Engineer Co-op</p>
-          <p><strong>Duration:</strong> May 2022 -- Dec 2022</p>
-          <ul>
-            <li>
-              Developed a student data merge tool for Tier 3 Support, automating
-              manual processes and saving significant time.
-            </li>
-            <li>
-              Investigated data sources for the ongoing GraphQL integration,
-              speeding up the overall transition process.
-            </li>
-            <li>
-              Served as acting Scrum Master for one sprint, ensuring sprint
-              progress and maintaining team momentum.
-            </li>
-          </ul>
-        </li>
-      </ul>
-    </section>
-
-    <section id="projects">
-      <h2>Projects</h2>
-      <ul>
-        <li>
-          <h3>LofiBeats</h3>
-          <p>Short description</p>
-        </li>
-        <li>
-          <h3>Self-hosted Portfolio</h3>
-          <p>Short description</p>
-        </li>
-        <li>
-          <h3>SinDDM</h3>
-          <p>Short description</p>
-        </li>
-        <li>
-          <h3>RISE Germany</h3>
-          <p>Short description</p>
-        </li>
-        <li>
-          <h3>Federated Learning</h3>
-          <p>Short description</p>
-        </li>
-        <li>
-          <h3>Vitri</h3>
-          <p>Short description</p>
-        </li>
-        <li>
-          <h3>Controlled Variance Pricing</h3>
-          <p>Short description</p>
-        </li>
-        <li>
-          <h3>AirBnB 10-K</h3>
-          <p>Short description</p>
-        </li>
-      </ul>
-    </section>
-
-    <section id="skills">
-      <h2>Skills</h2>
-      <ul>
-        <li>
-          <strong>Languages & Frameworks:</strong> Python, C#, ASP.NET,
-          JavaScript, SQL, Java, React
-        </li>
-        <li>
-          <strong>Database Systems:</strong> SQL Server, PostgreSQL, DynamoDB,
-          MongoDB
-        </li>
-        <li>
-          <strong>Developer Tools:</strong> Amazon Web Services (AWS), Git,
-          Subversion, Linux, DataDog, Docker
-        </li>
-      </ul>
-    </section>
-
-    <section id="contact">
-      <h2>Contact Information</h2>
-      <p><strong>Email:</strong> anh.lh.nguyen42@gmail.com</p>
-      <p>
-        <strong>LinkedIn:</strong>
-        <a href="https://linkedin.com/in/anhnlh">in/anhnlh</a>
-      </p>
-      <p>
-        <strong>GitHub:</strong> <a href="https://github.com/anhnlh">anhnlh</a>
-      </p>
-    </section>
-
-    <footer>
+        </section>
+      </div>
+      <section id="contact" class="mt-5">
+        <h2>Contact Information</h2>
+        <p><strong>Email:</strong> anh.lh.nguyen42@gmail.com</p>
+        <p>
+          <strong>LinkedIn:</strong>
+          <a href="https://linkedin.com/in/anhnlh">in/anhnlh</a>
+        </p>
+        <p>
+          <strong>GitHub:</strong>
+          <a href="https://github.com/anhnlh">anhnlh</a>
+        </p>
+      </section>
+    </div>
+    <footer class="bg-blue-950 py-1.5 text-center text-sm">
       <p>&copy; 2025 Anh Nguyen. All rights reserved.</p>
     </footer>
   </body>
