@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Portfolio website" />
     <title>anhnlh</title>
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="/src/styles.css" />
-    <script src="src/main.js" defer></script>
+    <script src="src/main.js" defer type="module"></script>
   </head>
   <body>
     <nav
-      class="flex flex-wrap items-center justify-between bg-blue-950 py-3 text-xl"
+      class="fixed top-0 right-0 left-0 z-1 flex flex-wrap items-center justify-between bg-blue-950 py-3 text-xl shadow-md"
     >
       <a
         href="/"
@@ -52,7 +52,7 @@
           <li>
             <a
               class="block rounded-sm p-2 text-slate-100 no-underline hover:bg-teal-800 md:py-0 md:hover:bg-transparent md:hover:text-emerald-400"
-              href="/projects"
+              href="/projects/"
               >Projects</a
             >
           </li>
@@ -66,7 +66,9 @@
       <p class="text-xl">
         Software Engineer.
         <br />
-        BS Computer Science &amp; Economics from
+        Likes backend development but dabbles in frontend as well.
+        <br />
+        BS Computer Science & Economics from
         <span class="font-bold text-orange-400">RIT</span>.
         <br />
         <svg
@@ -95,7 +97,7 @@
         class="mt-64 flex flex-col justify-center gap-5 text-center text-xl sm:flex-row sm:gap-10"
       >
         <a
-          class="cursor-pointer rounded px-4 py-2 text-slate-100 no-underline outline outline-emerald-200 hover:bg-indigo-800 hover:outline-emerald-600"
+          class="cursor-pointer rounded px-4 py-2 text-center text-slate-100 no-underline outline outline-emerald-200 hover:bg-indigo-800 hover:outline-emerald-600 sm:w-64"
           href="https://storage.anhnlh.com/anh-nguyen-resume.pdf"
           target="_blank"
           rel="noopener noreferrer"
@@ -103,7 +105,7 @@
           Resume
         </a>
         <a
-          class="cursor-pointer rounded px-4 py-2 text-slate-100 no-underline outline outline-emerald-200 hover:bg-indigo-800 hover:outline-emerald-600"
+          class="cursor-pointer rounded px-4 py-2 text-center text-slate-100 no-underline outline outline-emerald-200 hover:bg-indigo-800 hover:outline-emerald-600 sm:w-64"
           href="https://www.linkedin.com/in/anhnlh"
           target="_blank"
           rel="noopener noreferrer"
@@ -111,7 +113,7 @@
           LinkedIn
         </a>
         <a
-          class="cursor-pointer rounded px-4 py-2 text-slate-100 no-underline outline outline-emerald-200 hover:bg-indigo-800 hover:outline-emerald-600"
+          class="cursor-pointer rounded px-4 py-2 text-center text-slate-100 no-underline outline outline-emerald-200 hover:bg-indigo-800 hover:outline-emerald-600 sm:w-64"
           href="https://github.com/anhnlh"
           target="_blank"
           rel="noopener noreferrer"
@@ -272,40 +274,16 @@
         </li>
       </ul>
     </section>
-    <section id="projects" class="m-10">
-      <h2>Projects</h2>
-      <ul>
+    <section id="education" class="m-10">
+      <h2>Education</h2>
+      <ul class="ml-5 list-disc">
         <li>
-          <h3>LofiBeats</h3>
-          <p>Short description</p>
+          Graduated in December 2024 Summa Cum Laude with a B.S. Computer
+          Science & Economics from Rochester Institute of Technology.
         </li>
         <li>
-          <h3>Self-hosted Portfolio</h3>
-          <p>Short description</p>
-        </li>
-        <li>
-          <h3>SinDDM</h3>
-          <p>Short description</p>
-        </li>
-        <li>
-          <h3>RISE Germany</h3>
-          <p>Short description</p>
-        </li>
-        <li>
-          <h3>Federated Learning</h3>
-          <p>Short description</p>
-        </li>
-        <li>
-          <h3>Vitri</h3>
-          <p>Short description</p>
-        </li>
-        <li>
-          <h3>Controlled Variance Pricing</h3>
-          <p>Short description</p>
-        </li>
-        <li>
-          <h3>AirBnB 10-K</h3>
-          <p>Short description</p>
+          Honors Program, Dean's List every semester, Outstanding Undergraduate
+          Scholar Award (top 1%).
         </li>
       </ul>
     </section>
