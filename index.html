@@ -7,9 +7,9 @@
     <title>anhnlh</title>
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <link rel="stylesheet" href="/src/styles.css" />
-    <script src="src/components/navbar.js"></script>
+    <script src="src/main.js" defer></script>
   </head>
-  <body class="font-jetbrains-mono bg-slate-900 text-slate-100">
+  <body>
     <nav
       class="flex flex-wrap items-center justify-between bg-blue-950 py-3 text-xl"
     >
@@ -20,7 +20,7 @@
       >
       <button
         id="menu-toggle"
-        class="mx-5 block rounded-lg p-2 hover:bg-indigo-800 focus:ring-indigo-600 focus:outline-hidden md:hidden"
+        class="mx-5 block cursor-pointer rounded-lg p-2 hover:bg-indigo-800 focus:ring-indigo-600 focus:outline-hidden md:hidden"
       >
         <span class="sr-only">Open main menu</span>
         <svg
@@ -44,214 +44,290 @@
         >
           <li>
             <a
-              class="block rounded-sm p-2 no-underline hover:bg-emerald-600 hover:text-slate-100 md:py-0 md:hover:bg-transparent md:hover:text-emerald-400"
+              class="block rounded-sm bg-emerald-600 p-2 text-slate-100 no-underline md:bg-transparent md:py-0 md:text-emerald-400 md:hover:text-emerald-400"
               href="/"
               >Home</a
             >
           </li>
           <li>
             <a
-              class="block rounded-sm p-2 no-underline hover:bg-emerald-600 hover:text-slate-100 md:py-0 md:hover:bg-transparent md:hover:text-emerald-400"
-              href="/pages/projects"
+              class="block rounded-sm p-2 text-slate-100 no-underline hover:bg-teal-800 md:py-0 md:hover:bg-transparent md:hover:text-emerald-400"
+              href="/projects"
               >Projects</a
             >
           </li>
         </ul>
       </div>
     </nav>
-    <script>
-      const menu = document.getElementById("menu");
-      const menuButton = document.getElementById("menu-toggle");
-      menuButton.addEventListener("click", () =>
-        menu.classList.toggle("hidden"),
-      );
-    </script>
-    <div class="mx-5 mb-10">
-      <!-- Perhaps use this "bg-linear-to-b from-slate-900 via-indigo-800 via-40% to-slate-900" -->
-      <section id="about" class="ml-5 py-64">
-        <h1 class="mb-5 text-6xl text-emerald-400 md:text-7xl">Anh Nguyen</h1>
-        <p class="text-base md:text-lg">
-          Software Engineer.
-          <br />
-          BS Computer Science &amp; Economics from
-          <span class="text-orange-400">RIT</span>.
-        </p>
-      </section>
-
-      <div id="cards" class="grid gap-5 md:grid-cols-3">
-        <section
-          id="experience"
-          class="rounded-2xl border-2 border-indigo-500 p-8 md:p-6"
+    <section id="about" class="bg-indigo-700 p-10 pt-64">
+      <h1 class="mb-5 text-6xl font-semibold text-emerald-400 md:text-7xl">
+        Anh Nguyen
+      </h1>
+      <p class="text-xl">
+        Software Engineer.
+        <br />
+        BS Computer Science &amp; Economics from
+        <span class="font-bold text-orange-400">RIT</span>.
+        <br />
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="relative -top-0.5 inline size-6 align-middle"
+          aria-hidden="true"
         >
-          <h2>Experience</h2>
-          <ul>
-            <li>
-              <h3>Frontier Science</h3>
-              <p><strong>Location:</strong> Amherst, NY (Remote)</p>
-              <p><strong>Role:</strong> Software Engineer</p>
-              <p><strong>Duration:</strong> Feb 2025 -- Current</p>
-              <ul>
-                <li>
-                  Developing the Web LDMS laboratory information management
-                  systems, serving 800+ labs worldwide.
-                </li>
-                <li>
-                  Added features and fixed critical bugs for Web LDMS, improving
-                  the overall user experience and stability.
-                </li>
-                <li>
-                  Completed numerous compliance trainings required by the NIH,
-                  21 CFR Part 11, etc.
-                </li>
-              </ul>
-            </li>
-            <li>
-              <h3>Düsseldorf University of Applied Sciences</h3>
-              <p><strong>Location:</strong> Düsseldorf, Germany</p>
-              <p><strong>Role:</strong> DAAD RISE Germany Research Scholar</p>
-              <p><strong>Duration:</strong> May 2024 -- Aug 2024</p>
-              <ul>
-                <li>
-                  Researched explainable AI (xAI) techniques and developed
-                  autoencoder models for dimensionality reduction.
-                </li>
-                <li>
-                  Developed an interactive suite for comparing the performance
-                  of multiple dimensionality reduction methods.
-                </li>
-                <li>
-                  Optimized the novel data quality assurance tool, reducing
-                  runtime by 90% and significantly improving efficiency.
-                </li>
-              </ul>
-            </li>
-            <li>
-              <h3>Amplify Education Inc.</h3>
-              <p><strong>Location:</strong> Brooklyn, NY (Remote)</p>
-              <p><strong>Role:</strong> Software Engineer Co-op</p>
-              <p><strong>Duration:</strong> Jan 2024 -- May 2024</p>
-              <ul>
-                <li>
-                  Implemented xAPI user experience collection in mCLASS,
-                  impacting over 200,000 K-3 students in Louisiana.
-                </li>
-                <li>
-                  Resolved a persistent front-end error, reducing 10% user
-                  frustration and enhancing application stability.
-                </li>
-                <li>
-                  Optimized legacy PagerDuty monitors and alarms, minimizing
-                  alert fatigue and increasing team productivity.
-                </li>
-              </ul>
-            </li>
-            <li>
-              <h3>Amplify Education Inc.</h3>
-              <p><strong>Location:</strong> Brooklyn, NY (Remote)</p>
-              <p><strong>Role:</strong> Software Engineer Co-op</p>
-              <p><strong>Duration:</strong> May 2022 -- Dec 2022</p>
-              <ul>
-                <li>
-                  Developed a student data merge tool for Tier 3 Support,
-                  automating manual processes and saving significant time.
-                </li>
-                <li>
-                  Investigated data sources for the ongoing GraphQL integration,
-                  speeding up the overall transition process.
-                </li>
-                <li>
-                  Served as acting Scrum Master for one sprint, ensuring sprint
-                  progress and maintaining team momentum.
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </section>
-
-        <section
-          id="projects"
-          class="rounded-2xl border-2 border-indigo-500 p-8 md:p-6"
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+          />
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"
+          />
+        </svg>
+        <span class="sr-only">Location:</span> Rochester, NY.
+      </p>
+      <div
+        class="mt-64 flex flex-col justify-center gap-5 text-center text-xl sm:flex-row sm:gap-10"
+      >
+        <a
+          class="cursor-pointer rounded px-4 py-2 text-slate-100 no-underline outline outline-emerald-200 hover:bg-indigo-800 hover:outline-emerald-600"
+          href="https://storage.anhnlh.com/anh-nguyen-resume.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
         >
-          <h2>Projects</h2>
-          <ul>
-            <li>
-              <h3>LofiBeats</h3>
-              <p>Short description</p>
-            </li>
-            <li>
-              <h3>Self-hosted Portfolio</h3>
-              <p>Short description</p>
-            </li>
-            <li>
-              <h3>SinDDM</h3>
-              <p>Short description</p>
-            </li>
-            <li>
-              <h3>RISE Germany</h3>
-              <p>Short description</p>
-            </li>
-            <li>
-              <h3>Federated Learning</h3>
-              <p>Short description</p>
-            </li>
-            <li>
-              <h3>Vitri</h3>
-              <p>Short description</p>
-            </li>
-            <li>
-              <h3>Controlled Variance Pricing</h3>
-              <p>Short description</p>
-            </li>
-            <li>
-              <h3>AirBnB 10-K</h3>
-              <p>Short description</p>
-            </li>
-          </ul>
-        </section>
-
-        <section
-          id="skills"
-          class="rounded-2xl border-2 border-indigo-500 p-8 md:p-6"
+          Resume
+        </a>
+        <a
+          class="cursor-pointer rounded px-4 py-2 text-slate-100 no-underline outline outline-emerald-200 hover:bg-indigo-800 hover:outline-emerald-600"
+          href="https://www.linkedin.com/in/anhnlh"
+          target="_blank"
+          rel="noopener noreferrer"
         >
-          <h2>Skills</h2>
-          <ul>
-            <li>
-              <strong>Languages & Frameworks:</strong> Python, C#, ASP.NET,
-              JavaScript, SQL, Java, React
-            </li>
-            <li>
-              <strong>Database Systems:</strong> SQL Server, PostgreSQL,
-              DynamoDB, MongoDB
-            </li>
-            <li>
-              <strong>Developer Tools:</strong> Amazon Web Services (AWS), Git,
-              Subversion, Linux, DataDog, Docker
-            </li>
-          </ul>
-        </section>
+          LinkedIn
+        </a>
+        <a
+          class="cursor-pointer rounded px-4 py-2 text-slate-100 no-underline outline outline-emerald-200 hover:bg-indigo-800 hover:outline-emerald-600"
+          href="https://github.com/anhnlh"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          GitHub
+        </a>
       </div>
-      <section id="contact" class="mt-5 border-t-1 border-slate-500 pt-3">
-        <h2>Contact Information</h2>
-        <p class="mb-5">
-          Reach out to collaborate, check out my code, or send me a message for
-          any reason.
-        </p>
-        <p>
-          <span class="text-rose-500">Email:</span>
-          <a href="mailto:anh.lh.nguyen42@gmail.com"
-            >anh.lh.nguyen42@gmail.com</a
-          >
-        </p>
-        <p>
-          <span class="text-sky-500">LinkedIn:</span>
-          <a href="https://linkedin.com/in/anhnlh">in/anhnlh</a>
-        </p>
-        <p>
-          <span class="text-zinc-400">GitHub:</span>
-          <a href="https://github.com/anhnlh">anhnlh</a>
-        </p>
-      </section>
-    </div>
+    </section>
+    <section id="skills" class="m-10">
+      <h2>Skills</h2>
+      <ul id="experience" class="grid gap-5 md:grid-cols-3">
+        <li class="rounded-2xl border-2 border-indigo-500 p-5">
+          <strong class="text-xl">Languages & Frameworks:</strong>
+          <p class="text-lg">
+            Python, C#, JavaScript, SQL, Java, ASP.NET, React
+          </p>
+        </li>
+        <li class="rounded-2xl border-2 border-indigo-500 p-5">
+          <strong class="text-xl">Database Systems:</strong>
+          <p class="text-lg">SQL Server, PostgreSQL, DynamoDB, MongoDB</p>
+        </li>
+        <li class="rounded-2xl border-2 border-indigo-500 p-5">
+          <strong class="text-xl">Developer Tools:</strong>
+          <p class="text-lg">
+            Amazon Web Services, Git, Subversion, Linux, DataDog, Docker
+          </p>
+        </li>
+      </ul>
+    </section>
+
+    <section id="experience" class="m-10">
+      <h2>Experience</h2>
+      <ul>
+        <li>
+          <span class="sr-only">February 2025 to April 2025</span>
+          <p class="hidden text-xl md:block" aria-hidden="true">
+            February 2025 &ndash; April 2025
+          </p>
+          <p class="block text-xl md:hidden" aria-hidden="true">
+            Feb 2025 &ndash; Apr 2025
+          </p>
+          <div class="my-1 ml-3 border-l-1 pb-5 pl-3">
+            <h3 class="pt-1 text-lg font-medium">
+              <strong class="text-emerald-500">Software Engineer</strong> at
+              Frontier Science
+            </h3>
+            <h4 class="mb-3">Amherst, NY (Remote)</h4>
+            <p>
+              After graduating from RIT in December 2024, I joined Frontier
+              Science as a Software Engineer. My primary focus was enhancing the
+              Web LDMS laboratory information management system, which supports
+              over 800 labs globally. I contributed by developing user-requested
+              features and resolving critical defects to improve system
+              reliability and functionality.
+            </p>
+            <p>
+              Unfortunately, my tenure was cut short after two months due to NIH
+              funding delays, which led to company-wide layoffs.
+            </p>
+          </div>
+        </li>
+        <li>
+          <span class="sr-only">May 2024 to August 2024</span>
+          <p class="hidden text-xl md:block" aria-hidden="true">
+            May 2024 &ndash; August 2024
+          </p>
+          <p class="block text-xl md:hidden" aria-hidden="true">
+            May 2024 &ndash; Aug 2024
+          </p>
+          <div class="my-1 ml-3 border-l-1 pb-5 pl-3">
+            <h3 class="pt-1 text-lg font-medium">
+              <strong class="text-emerald-500">Research Scholar</strong>
+              at D&uuml;sseldorf University of Applied Sciences
+            </h3>
+            <h4 class="mb-3">D&uuml;sseldorf, Germany</h4>
+            <p>
+              I received the prestigious
+              <a
+                href="https://www.daad.de/rise/en/rise-germany/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                DAAD RISE Germany Scholarship</a
+              >, awarded to 320 students out of 2358 applicants, that fully
+              funds the summer research at a German University.
+            </p>
+            <p>
+              I researched explainable AI alongside my PhD candidate supervisor
+              Christian Sieberichs. I developed and tested different methods for
+              dimensionality reduction, such as autoencoders, PCA, UMAP, etc. I
+              also built an interactive comparison suite for different methods,
+              and ultimately discovered PCA to be the most performant method for
+              dimensionality reduction for my supervisor's data quality
+              assurance tool
+              <a
+                href="https://link.springer.com/article/10.1007/s43681-023-00393-3"
+                target="_blank"
+                rel="noopener noreferrer"
+                >ECS</a
+              >.
+            </p>
+            <p>
+              Articles:
+              <a
+                href="https://www.rit.edu/news/students-will-live-learn-and-explore-abroad-thanks-international-fellowships-and-scholarships"
+                target="_blank"
+                rel="noopener noreferrer"
+                >RIT News</a
+              >
+            </p>
+          </div>
+        </li>
+        <li>
+          <span class="sr-only">Jan 2024 to May 2024</span>
+          <p class="hidden text-xl md:block" aria-hidden="true">
+            January 2024 &ndash; May 2024
+          </p>
+          <p class="block text-xl md:hidden" aria-hidden="true">
+            Jan 2024 &ndash; May 2024
+          </p>
+          <div class="my-1 ml-3 border-l-1 pb-5 pl-3">
+            <h3 class="pt-1 text-lg font-medium">
+              <strong class="text-emerald-500">Software Engineer Co-op</strong>
+              at Amplify Education
+            </h3>
+            <h4 class="mb-3">Brooklyn, NY (Remote)</h4>
+            <p>
+              I returned to Amplify Education for a 2nd co-op, joining a
+              different team, where we solved user-reported issues and
+              occasionally developed new features for the mCLASS assessment
+              suite.
+            </p>
+          </div>
+        </li>
+        <li>
+          <span class="sr-only">May 2022 to December 2022</span>
+          <p class="hidden text-xl md:block" aria-hidden="true">
+            May 2022 &ndash; December 2022
+          </p>
+          <p class="block text-xl md:hidden" aria-hidden="true">
+            May 2022 &ndash; Dec 2022
+          </p>
+          <div class="my-1 ml-3 border-l-1 pb-5 pl-3">
+            <h3 class="pt-1 text-lg font-medium">
+              <strong class="text-emerald-500">Software Engineer Co-op</strong>
+              at Amplify Education
+            </h3>
+            <h4 class="mb-3">Brooklyn, NY (Remote)</h4>
+            <p>
+              I became a Software Engineer at Amplify for my first co-op, where
+              I extensively coded in Python and JavaScript in React and utilized
+              a multitude of AWS products, such as Lambdas, CodeDeploy, S3, IAM,
+              and more, to complete my tasks. I also studied GraphQL extensively
+              and its feasibility to implement to consolidate multiple legacy
+              data sources into a queryable data repository.
+            </p>
+          </div>
+        </li>
+      </ul>
+    </section>
+    <section id="projects" class="m-10">
+      <h2>Projects</h2>
+      <ul>
+        <li>
+          <h3>LofiBeats</h3>
+          <p>Short description</p>
+        </li>
+        <li>
+          <h3>Self-hosted Portfolio</h3>
+          <p>Short description</p>
+        </li>
+        <li>
+          <h3>SinDDM</h3>
+          <p>Short description</p>
+        </li>
+        <li>
+          <h3>RISE Germany</h3>
+          <p>Short description</p>
+        </li>
+        <li>
+          <h3>Federated Learning</h3>
+          <p>Short description</p>
+        </li>
+        <li>
+          <h3>Vitri</h3>
+          <p>Short description</p>
+        </li>
+        <li>
+          <h3>Controlled Variance Pricing</h3>
+          <p>Short description</p>
+        </li>
+        <li>
+          <h3>AirBnB 10-K</h3>
+          <p>Short description</p>
+        </li>
+      </ul>
+    </section>
+    <section id="contact" class="m-10 border-t-1 border-slate-500 pt-8">
+      <h2>Contact Information</h2>
+      <p class="mb-5">
+        Reach out to collaborate, check out my code, or send me a message for
+        any reason.
+      </p>
+      <p>
+        Email:
+        <a href="mailto:anh.lh.nguyen42@gmail.com">anh.lh.nguyen42@gmail.com</a>
+      </p>
+      <p>
+        LinkedIn:
+        <a href="https://linkedin.com/in/anhnlh">in/anhnlh</a>
+      </p>
+      <p>
+        GitHub:
+        <a href="https://github.com/anhnlh">anhnlh</a>
+      </p>
+    </section>
     <footer class="bg-blue-950 py-1.5 text-center text-sm">
       <p>&copy; 2025 Anh Nguyen. All rights reserved.</p>
     </footer>
