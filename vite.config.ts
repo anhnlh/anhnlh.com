@@ -5,8 +5,8 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: "index.html",
-        projects: "projects/index.html",
-        portfolio: "projects/portfolio.html",
+        portfolio: "portfolio/index.html",
+        website: "portfolio/website.html",
       },
     },
   },
